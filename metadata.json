@@ -1,0 +1,6 @@
+{
+  "name": "SHIFO MED — Zamonaviy tibbiyot markazi",
+  "description": "SHIFO MED zamonaviy xususiy tibbiyot markazi veb-sayti: malakali shifokorlar, aniq diagnostika va onlayn qabulga yozilish.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

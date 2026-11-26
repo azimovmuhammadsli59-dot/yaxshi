@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHIFO MED — Zamonaviy tibbiyot markazi</title>
+  <meta name="description" content="SHIFO MED zamonaviy xususiy tibbiyot markazi veb-sayti: malakali shifokorlar, aniq diagnostika va onlayn qabulga yozilish." />
+  <meta property="og:title" content="SHIFO MED — Zamonaviy tibbiyot markazi" />
+  <meta property="og:description" content="Siz va yaqinlaringiz uchun zamonaviy tibbiy xizmat, tajribali shifokorlar va individual yondashuv." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Display) + DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Asosiy uslublar fayli -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sahifa yuklanish animatsiyasi -->
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg class="loader-cross" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#0D9488" />
+        <path d="M20 10V30M10 20H30" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+      </svg>
+      <span class="loader-text">SHIFO MED</span>
+    </div>
+  </div>
+
+  <!-- Asosiy kontentga o'tish havolasi (accessibility) -->
+  <a href="#bosh-sahifa" class="skip-link">Asosiy mazmunga o'tish</a>
+
+  <!-- =========================================================
+       1. HEADER / NAVIGATSIYA
+       ========================================================= -->
+  <header id="siteHeader" class="site-header">
+    <div class="container header-inner">
+      <!-- 1-zona: Brend logotipi -->
+      <a href="#bosh-sahifa" class="brand-logo" aria-label="SHIFO MED bosh sahifa">
+        <svg class="brand-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#0D9488" />
+          <path d="M16 8V24M8 16H24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <span class="brand-wordmark">SHIFO MED</span>
+      </a>
+
+      <!-- 2-zona: Asosiy navigatsiya menyusi -->
+      <nav class="main-nav" aria-label="Asosiy navigatsiya">
+        <ul class="nav-list">
+          <li><a href="#bosh-sahifa" class="nav-link active" data-section="bosh-sahifa">Bosh sahifa</a></li>
+          <li><a href="#biz-haqimizda" class="nav-link" data-section="biz-haqimizda">Biz haqimizda</a></li>
+          <li><a href="#xizmatlar" class="nav-link" data-section="xizmatlar">Xizmatlar</a></li>
+          <li><a href="#shifokorlar" class="nav-link" data-section="shifokorlar">Shifokorlar</a></li>
+          <li><a href="#yangiliklar" class="nav-link" data-section="yangiliklar">Yangiliklar</a></li>
+          <li><a href="#aloqa" class="nav-link" data-section="aloqa">Aloqa</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3-zona: Asosiy harakat tugmasi va mobil menyu tugmasi -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-primary header-cta" data-open-booking="true">
+          Qabulga yozilish
+        </button>
+        <button
+          type="button"
+          id="mobileMenuBtn"
+          class="mobile-menu-btn"
+          aria-label="Mobil menyuni ochish"
+          aria-expanded="false"
+          aria-controls="mobileDrawer"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobil navigatsiya paneli -->
+    <div id="mobileDrawer" class="mobile-drawer" hidden>
+      <nav class="mobile-nav" aria-label="Mobil navigatsiya">
+        <ul class="mobile-nav-list">
+          <li><a href="#bosh-sahifa" class="mobile-nav-link">Bosh sahifa</a></li>
+          <li><a href="#biz-haqimizda" class="mobile-nav-link">Biz haqimizda</a></li>
+          <li><a href="#xizmatlar" class="mobile-nav-link">Xizmatlar</a></li>
+          <li><a href="#shifokorlar" class="mobile-nav-link">Shifokorlar</a></li>
+          <li><a href="#yangiliklar" class="mobile-nav-link">Yangiliklar</a></li>
+          <li><a href="#aloqa" class="mobile-nav-link">Aloqa</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary mobile-drawer-cta" data-open-booking="true">
+          Qabulga yozilish
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. HERO BO'LIMI
+         ========================================================= -->
+    <section id="bosh-sahifa" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="hero-kicker">Zamonaviy tibbiyot markazi · Toshkent</p>
+          <h1 class="hero-title">Sog'lig'ingiz — bizning eng katta qadriyatimiz</h1>
+          <p class="hero-subtitle">
+            Siz va yaqinlaringiz uchun zamonaviy tibbiy xizmat, tajribali shifokorlar va individual yondashuv.
+          </p>
+          <div class="hero-actions">
+            <a href="#qabul" class="btn btn-primary btn-lg">
+              Qabulga yozilish
+            </a>
+            <a href="#xizmatlar" class="btn btn-secondary btn-lg">
+              Xizmatlarimiz
+            </a>
+          </div>
+          <p class="hero-demo-note">
+            Namoyish (demo) loyihasi · Dushanba – Shanba, 08:00 – 20:00
+          </p>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-image-frame">
+            <img
+              src="/src/assets/images/hero_clinic_care_1795669865001.jpg"
+              alt="SHIFO MED klinikasida shifokor va bemor maslahati"
+              class="hero-image"
+              referrerpolicy="no-referrer"
+            />
+            <div class="media-fallback" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 6v12M6 12h12" stroke-linecap="round" />
+              </svg>
+              <span>SHIFO MED Tibbiyot Markazi</span>
+            </div>
+          </div>
+
+          <!-- Suzuvchi ma'lumot kartasi -->
+          <div class="hero-floating-card" aria-label="Klinikaning asosiy afzalliklari">
+            <div class="floating-item">
+              <span class="floating-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <span class="floating-text">24/7 Tez tibbiy yordam</span>
+            </div>
+            <div class="floating-item">
+              <span class="floating-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </span>
+              <span class="floating-text">Malakali shifokorlar</span>
+            </div>
+            <div class="floating-item">
+              <span class="floating-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+              </span>
+              <span class="floating-text">Zamonaviy diagnostika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. STATISTIKA BO'LIMI
+         ========================================================= -->
+    <section id="statistika" class="stats-section" aria-label="Klinika ko'rsatkichlari">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-value">
+              <span class="stat-number" data-target="15" data-suffix="+">15+</span>
+            </div>
+            <p class="stat-label">yil tajriba</p>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-value">
+              <span class="stat-number" data-target="30" data-suffix="+">30+</span>
+            </div>
+            <p class="stat-label">malakali shifokor</p>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-value">
+              <span class="stat-number" data-target="10000" data-suffix="+">10 000+</span>
+            </div>
+            <p class="stat-label">mamnun bemor</p>
+          </div>
+          <div class="stat-item reveal">
+            <div class="stat-value">
+              <span class="stat-number" data-target="20" data-suffix="+">20+</span>
+            </div>
+            <p class="stat-label">tibbiy xizmat</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. BIZ HAQIMIZDA BO'LIMI
+         ========================================================= -->
+    <section id="biz-haqimizda" class="about-section section-padding">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-image-frame">
+            <img
+              src="/src/assets/images/about_medical_team_1795669865016.jpg"
+              alt="SHIFO MED shifokorlar jamoasi zamonaviy diagnostika natijalarini muhokama qilmoqda"
+              class="about-image"
+              referrerpolicy="no-referrer"
+            />
+            <div class="media-fallback" aria-hidden="true">
+              <span>SHIFO MED Jamoasi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="section-kicker">Klinika haqida</p>
+          <h2 class="section-title">Biz haqimizda</h2>
+          <p class="about-description">
+            SHIFO MED tibbiyot markazi bemorlarga sifatli, ishonchli va zamonaviy tibbiy xizmat ko'rsatishga intiladi. Bizning maqsadimiz — har bir bemorga individual yondashish, kasalliklarni erta aniqlash va sog'lom hayotga qaytishida yordam berish.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Bizning missiyamiz</h3>
+                <p class="pillar-text">Xalqaro tibbiy standartlar asosida aniq tashxis va samarali davolashni har bir oila uchun qulay qilish.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Qadriyatlarimiz</h3>
+                <p class="pillar-text">Halollik, mehr-oqibat, bemor xavfsizligi va shaxsiy ma'lumotlar maxfiyligini qat'iy saqlash.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Zamonaviy uskunalar</h3>
+                <p class="pillar-text">Ekspert sinfidagi UZI, raqamli laboratoriya analizatorlari va ilg'or kardiologik monitoring tizimlari.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="pillar-title">Qulay muhit</h3>
+                <p class="pillar-text">Navbatsiz elektron qabul, yorug' va sokin kutish zallari hamda har bir bemorga alohida e'tibor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. TIBBIY XIZMATLAR BO'LIMI
+         ========================================================= -->
+    <section id="xizmatlar" class="services-section section-padding section-alt">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <div>
+            <p class="section-kicker">Yo'nalishlar</p>
+            <h2 class="section-title">Tibbiy xizmatlarimiz</h2>
+            <p class="section-subtitle">
+              Profilaktik ko'rikdan tortib ixtisoslashtirilgan davolashgacha bo'lgan 12 ta asosiy tibbiy yo'nalish.
+            </p>
+          </div>
+          <div class="service-filters" role="tablist" aria-label="Xizmat toifalari">
+            <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Barchasi</button>
+            <button type="button" class="filter-tab" data-filter="klinik" role="tab" aria-selected="false">Klinik qabul</button>
+            <button type="button" class="filter-tab" data-filter="diagnostika" role="tab" aria-selected="false">Diagnostika</button>
+            <button type="button" class="filter-tab" data-filter="muolaja" role="tab" aria-selected="false">Davolash</button>
+          </div>
+        </div>
+
+        <div id="servicesGrid" class="services-grid">
+          <!-- 1. Terapiya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="terapiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+                <circle cx="20" cy="10" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Terapiya</h3>
+            <p class="service-desc">Umumiy salomatlikni baholash, ichki kasalliklarni aniqlash va individual davolash rejasini tuzish.</p>
+            <button type="button" class="service-btn" data-service-detail="terapiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 2. Kardiologiya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="kardiologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Kardiologiya</h3>
+            <p class="service-desc">Yurak-qon tomir tizimi tekshiruvi, EKG, ExoKG va arterial bosimni barqarorlashtirish dasturlari.</p>
+            <button type="button" class="service-btn" data-service-detail="kardiologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 3. Pediatriya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="pediatriya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12h.01M15 12h.01M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
+                <path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Pediatriya</h3>
+            <p class="service-desc">Chaqaloqlar va o'smirlar salomatligini kuzatish, profilaktik ko'riklar hamda bolalar kasalliklarini davolash.</p>
+            <button type="button" class="service-btn" data-service-detail="pediatriya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 4. Nevrologiya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="nevrologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5V4.5Z"></path>
+                <path d="M12 4.5a2.5 2.5 0 0 1 4.96-.46 2.5 2.5 0 0 1 1.98 3 2.5 2.5 0 0 1 1.32 4.24 3 3 0 0 1-.34 5.58 2.5 2.5 0 0 1-2.96 3.08A2.5 2.5 0 0 1 12 19.5"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Nevrologiya</h3>
+            <p class="service-desc">Bosh og'rig'i, uyqu buzilishi, umurtqa pog'onasi va asab tizimi kasalliklarini kompleks davolash.</p>
+            <button type="button" class="service-btn" data-service-detail="nevrologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 5. Stomatologiya -->
+          <article class="service-card reveal" data-category="muolaja" data-service-id="stomatologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 4c-2 0-3.5 1.8-3.5 4.2 0 2.7 1.2 5.4 2.2 8.7.6 2 1.3 3.1 2.2 3.1.9 0 1.4-1 1.9-2.8.5-1.7 1-2.7 2.2-2.7s1.7 1 2.2 2.7c.5 1.8 1 2.8 1.9 2.8.9 0 1.6-1.1 2.2-3.1 1-3.3 2.2-6 2.2-8.7C20.5 5.8 19 4 17 4c-1.8 0-3 .9-5 .9S8.8 4 7 4Z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Stomatologiya</h3>
+            <p class="service-desc">Og'riqsiz tish davolash, professional tozalash, estetik restavratsiya va zamonaviy implantologiya.</p>
+            <button type="button" class="service-btn" data-service-detail="stomatologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 6. Ginekologiya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="ginekologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="9" r="5"></circle>
+                <path d="M12 14v7"></path>
+                <path d="M9 18h6"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Ginekologiya</h3>
+            <p class="service-desc">Ayollar salomatligini saqlash, profilaktik tekshiruvlar, homiladorlikni kuzatish va ehtiyotkor davolash.</p>
+            <button type="button" class="service-btn" data-service-detail="ginekologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 7. Dermatologiya -->
+          <article class="service-card reveal" data-category="klinik" data-service-id="dermatologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Dermatologiya</h3>
+            <p class="service-desc">Teri, soch va tirnoq kasalliklarini dermatoskopiya yordamida aniqlash va zamonaviy muolajalar.</p>
+            <button type="button" class="service-btn" data-service-detail="dermatologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 8. UZI diagnostika -->
+          <article class="service-card reveal" data-category="diagnostika" data-service-id="uzi">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 5V3M12 21v-2"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">UZI diagnostika</h3>
+            <p class="service-desc">Yuqori aniqlikdagi 3D/4D ultratovush tekshiruvlari va dopplerografiya xizmatlari tezkor xulosa bilan.</p>
+            <button type="button" class="service-btn" data-service-detail="uzi">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 9. Laboratoriya tahlillari -->
+          <article class="service-card reveal" data-category="diagnostika" data-service-id="laboratoriya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v6l-4.8 8.4A2 2 0 0 0 7 20h10a2 2 0 0 0 1.8-2.6L14 9V3"></path>
+                <path d="M7.5 14h9"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Laboratoriya tahlillari</h3>
+            <p class="service-desc">Biokimyoviy, gormonal, immunologik va umumiy klinik tahlillar natijasini qisqa muddatda olish.</p>
+            <button type="button" class="service-btn" data-service-detail="laboratoriya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 10. Oftalmologiya -->
+          <article class="service-card reveal" data-category="diagnostika" data-service-id="oftalmologiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Oftalmologiya</h3>
+            <p class="service-desc">Ko'rish o'tkirligini kompyuter diagnostikasi, ko'z bosimini o'lchash va ko'zoynak tanlash xizmati.</p>
+            <button type="button" class="service-btn" data-service-detail="oftalmologiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 11. Jarrohlik -->
+          <article class="service-card reveal" data-category="muolaja" data-service-id="jarrohlik">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                <path d="M12 8v8M8 12h8"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Jarrohlik</h3>
+            <p class="service-desc">Kam invaziv ambulator jarrohlik amaliyotlari, zamonaviy steril xonalar va tezkor tiklanish nazorati.</p>
+            <button type="button" class="service-btn" data-service-detail="jarrohlik">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+
+          <!-- 12. Fizioterapiya -->
+          <article class="service-card reveal" data-category="muolaja" data-service-id="fizioterapiya">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 20V10"></path>
+                <path d="M12 20V4"></path>
+                <path d="M6 20v-6"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Fizioterapiya</h3>
+            <p class="service-desc">Jarohatlardan keyingi tiklanish, lazeroterapiya, magnitoterapiya va shifobaxsh massaj muolajalari.</p>
+            <button type="button" class="service-btn" data-service-detail="fizioterapiya">
+              Batafsil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. SHIFOKORLARIMIZ BO'LIMI
+         ========================================================= -->
+    <section id="shifokorlar" class="doctors-section section-padding">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-kicker">Mutaxassislar jamoasi</p>
+          <h2 class="section-title">Tajribali shifokorlarimiz</h2>
+          <p class="section-subtitle">
+            O'z sohasining yetuk mutaxassislari sizning salomatligingiz uchun g'amxo'rlik qiladi (namoyish ma'lumotlari).
+          </p>
+        </div>
+
+        <div class="doctors-grid">
+          <!-- Shifokor 1 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-photo-wrap">
+              <img
+                src="/src/assets/images/doctor_cardiologist_1795669864936.jpg"
+                alt="Dr. Rustam Karimov — Kardiolog"
+                class="doctor-photo"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Dr. Rustam Karimov</span></div>
+            </div>
+            <div class="doctor-body">
+              <p class="doctor-meta">Kardiologiya · 18 yil tajriba</p>
+              <h3 class="doctor-name">Dr. Rustam Karimov</h3>
+              <p class="doctor-degree">Oliy toifali kardiolog, tibbiyot fanlari nomzodi</p>
+              <div class="doctor-rating" aria-label="Reyting 4.9 dan 5">
+                <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(148 ta baho)</span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline doctor-cta"
+                data-book-doctor="Dr. Rustam Karimov — Kardiologiya"
+              >
+                Qabulga yozilish
+              </button>
+            </div>
+          </article>
+
+          <!-- Shifokor 2 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-photo-wrap">
+              <img
+                src="/src/assets/images/doctor_pediatrician_1795669866336.jpg"
+                alt="Dr. Gulnora Qodirova — Pediatr"
+                class="doctor-photo"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Dr. Gulnora Qodirova</span></div>
+            </div>
+            <div class="doctor-body">
+              <p class="doctor-meta">Pediatriya · 12 yil tajriba</p>
+              <h3 class="doctor-name">Dr. Gulnora Qodirova</h3>
+              <p class="doctor-degree">Oliy toifali pediatr va neonatolog</p>
+              <div class="doctor-rating" aria-label="Reyting 5.0 dan 5">
+                <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span class="rating-score">5.0</span>
+                <span class="rating-count">(214 ta baho)</span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline doctor-cta"
+                data-book-doctor="Dr. Gulnora Qodirova — Pediatriya"
+              >
+                Qabulga yozilish
+              </button>
+            </div>
+          </article>
+
+          <!-- Shifokor 3 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-photo-wrap">
+              <img
+                src="/src/assets/images/doctor_neurologist_1795669865734.jpg"
+                alt="Dr. Temur Almazov — Nevrolog"
+                class="doctor-photo"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Dr. Temur Almazov</span></div>
+            </div>
+            <div class="doctor-body">
+              <p class="doctor-meta">Nevrologiya · 14 yil tajriba</p>
+              <h3 class="doctor-name">Dr. Temur Almazov</h3>
+              <p class="doctor-degree">Kattalar va o'smirlar nevrologi, vertebrolog</p>
+              <div class="doctor-rating" aria-label="Reyting 4.9 dan 5">
+                <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(162 ta baho)</span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline doctor-cta"
+                data-book-doctor="Dr. Temur Almazov — Nevrologiya"
+              >
+                Qabulga yozilish
+              </button>
+            </div>
+          </article>
+
+          <!-- Shifokor 4 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-photo-wrap">
+              <img
+                src="/src/assets/images/doctor_diagnostician_1795669866663.jpg"
+                alt="Dr. Dilnoza Axmedova — UZI diagnostika va terapevt"
+                class="doctor-photo"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Dr. Dilnoza Axmedova</span></div>
+            </div>
+            <div class="doctor-body">
+              <p class="doctor-meta">UZI va Terapiya · 10 yil tajriba</p>
+              <h3 class="doctor-name">Dr. Dilnoza Axmedova</h3>
+              <p class="doctor-degree">Ultratovush diagnostikasi mutaxassisi va terapevt</p>
+              <div class="doctor-rating" aria-label="Reyting 4.8 dan 5">
+                <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span class="rating-score">4.8</span>
+                <span class="rating-count">(129 ta baho)</span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline doctor-cta"
+                data-book-doctor="Dr. Dilnoza Axmedova — UZI diagnostika"
+              >
+                Qabulga yozilish
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. QABULGA YOZILISH FORMASI
+         ========================================================= -->
+    <section id="qabul" class="booking-section section-padding section-alt">
+      <div class="container booking-grid">
+        <div class="booking-info reveal">
+          <p class="section-kicker">Onlayn yozilish</p>
+          <h2 class="section-title">Shifokor qabuliga oldindan yoziling</h2>
+          <p class="booking-lead">
+            Qulay sana va vaqtni tanlang — navbat kutmasdan o'zingizga kerakli mutaxassis ko'rigidan o'ting.
+          </p>
+
+          <ul class="booking-steps">
+            <li class="booking-step-item">
+              <span class="step-num">01</span>
+              <div>
+                <h3 class="step-title">Mutaxassis va vaqtni tanlang</h3>
+                <p class="step-text">O'zingizga qulay shifokor va bo'sh qabul soatini belgilang.</p>
+              </div>
+            </li>
+            <li class="booking-step-item">
+              <span class="step-num">02</span>
+              <div>
+                <h3 class="step-title">Ma'lumotlarni tasdiqlang</h3>
+                <p class="step-text">Ism-familiyangiz va O'zbekiston (+998) telefon raqamingizni kiriting.</p>
+              </div>
+            </li>
+            <li class="booking-step-item">
+              <span class="step-num">03</span>
+              <div>
+                <h3 class="step-title">Darhol javob oling</h3>
+                <p class="step-text">Ariza muvaffaqiyatli qabul qilinganligi haqida ekranda tasdiq oynasi chiqadi.</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="demo-disclaimer">
+            Eslatma: Ushbu forma namoyish (demo) rejimida ishlaydi; kiritilgan ma'lumotlar shifoxona serveriga yuborilmaydi.
+          </p>
+        </div>
+
+        <div class="booking-card reveal">
+          <form id="inlineBookingForm" class="booking-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingName" class="form-label">Bemorning ism-familiyasi <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="bookingName"
+                  name="fullName"
+                  class="form-control"
+                  placeholder="Masalan: Azizbek Rahimov"
+                  autocomplete="name"
+                  required
+                />
+                <span class="form-error" id="bookingNameError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingPhone" class="form-label">Telefon raqami <span class="req">*</span></label>
+                <input
+                  type="tel"
+                  id="bookingPhone"
+                  name="phone"
+                  class="form-control phone-input"
+                  placeholder="+998 90 123 45 67"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="form-error" id="bookingPhoneError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingSpecialist" class="form-label">Mutaxassis tanlash <span class="req">*</span></label>
+              <select id="bookingSpecialist" name="specialist" class="form-control" required>
+                <option value="">Mutaxassis yoki yo'nalishni tanlang</option>
+                <option value="Dr. Rustam Karimov — Kardiologiya">Dr. Rustam Karimov — Kardiologiya</option>
+                <option value="Dr. Gulnora Qodirova — Pediatriya">Dr. Gulnora Qodirova — Pediatriya</option>
+                <option value="Dr. Temur Almazov — Nevrologiya">Dr. Temur Almazov — Nevrologiya</option>
+                <option value="Dr. Dilnoza Axmedova — UZI diagnostika">Dr. Dilnoza Axmedova — UZI diagnostika</option>
+                <option value="Terapiya bo'limi">Terapiya bo'limi</option>
+                <option value="Stomatologiya bo'limi">Stomatologiya bo'limi</option>
+                <option value="Ginekologiya bo'limi">Ginekologiya bo'limi</option>
+                <option value="Dermatologiya bo'limi">Dermatologiya bo'limi</option>
+                <option value="Laboratoriya tahlillari">Laboratoriya tahlillari</option>
+                <option value="Oftalmologiya bo'limi">Oftalmologiya bo'limi</option>
+                <option value="Jarrohlik bo'limi">Jarrohlik bo'limi</option>
+                <option value="Fizioterapiya bo'limi">Fizioterapiya bo'limi</option>
+              </select>
+              <span class="form-error" id="bookingSpecialistError" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookingDate" class="form-label">Qabul sanasi <span class="req">*</span></label>
+                <input
+                  type="date"
+                  id="bookingDate"
+                  name="date"
+                  class="form-control"
+                  required
+                />
+                <span class="form-error" id="bookingDateError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingTime" class="form-label">Qabul vaqti <span class="req">*</span></label>
+                <select id="bookingTime" name="time" class="form-control" required>
+                  <option value="">Vaqtni tanlang</option>
+                  <option value="08:30">08:30</option>
+                  <option value="09:30">09:30</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:30">11:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="19:00">19:00</option>
+                </select>
+                <span class="form-error" id="bookingTimeError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingNote" class="form-label">Izoh (ixtiyoriy)</label>
+              <textarea
+                id="bookingNote"
+                name="note"
+                class="form-control form-textarea"
+                rows="3"
+                placeholder="Shikoyatlaringiz yoki qo'shimcha savollaringizni yozing..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="inlineBookingSubmit">
+              <span class="btn-label">Qabulga yozilishni tasdiqlash</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. NEGA AYNAN SHIFO MED?
+         ========================================================= -->
+    <section id="afzalliklar" class="why-section section-padding">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-kicker">Bizning ustunliklarimiz</p>
+          <h2 class="section-title">Nega aynan SHIFO MED?</h2>
+          <p class="section-subtitle">
+            Bemorlarimiz bizni yuqori kasbiy mahorat, aniq natijalar va samimiy g'amxo'rlik uchun tanlaydi.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Tajribali mutaxassislar</h3>
+            <p class="why-text">Ko'p yillik amaliyotga ega, xalqaro seminar va malaka oshirish kurslarida qatnashgan shifokorlar.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+              </svg>
+            </div>
+            <h3 class="why-title">Zamonaviy tibbiy uskunalar</h3>
+            <p class="why-text">Yetakchi jahon ishlab chiqaruvchilarining aniq raqamli diagnostika va davolash apparatlari.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="why-title">Tez va aniq diagnostika</h3>
+            <p class="why-text">Ko'pchilik laboratoriya va instrumental tekshiruv natijalari bir necha soat ichida tayyor bo'ladi.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Bemorlar uchun qulay sharoit</h3>
+            <p class="why-text">Toza, shinam xonalar, qulay kutish maydoni va oldindan belgilangan vaqtda navbatsiz qabul.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Individual yondashuv</h3>
+            <p class="why-text">Har bir bemorning yoshi, turmush tarzi va organizm xususiyatlariga mos alohida davolash dasturi.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="why-title">Hamyonbop narxlar</h3>
+            <p class="why-text">Shaffof narx siyosati, oldindan ma'lum xizmat qiymati va kompleks tekshiruv paketlari.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. BEMORLAR FIKRLARI (KARUSEL)
+         ========================================================= -->
+    <section id="fikrlar" class="reviews-section section-padding section-alt">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <div>
+            <p class="section-kicker">Bemorlar e'tirofi</p>
+            <h2 class="section-title">Bemorlarimiz fikrlari</h2>
+          </div>
+          <div class="slider-controls">
+            <button type="button" id="prevReviewBtn" class="slider-btn" aria-label="Oldingi fikr">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" id="nextReviewBtn" class="slider-btn" aria-label="Keyingi fikr">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="reviews-viewport" id="reviewsViewport" aria-roledescription="karusel" aria-label="Bemorlar fikrlari karuseli">
+          <div class="reviews-track" id="reviewsTrack">
+            <!-- Fikr 1 -->
+            <article class="review-card">
+              <div class="review-stars" aria-label="5 yulduz">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="review-text">
+                "Onamni kardiologiya bo'limiga olib keldim. Dr. Rustam Karimov barcha tahlillarni sinchiklab ko'rib, aniq davolash kursini belgiladilar. Navbatsiz va juda tartibli qabul uchun rahmat."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">M</div>
+                <div>
+                  <h3 class="author-name">Malika Tursunova</h3>
+                  <p class="author-meta">Kardiologiya bo'limi bemori · Toshkent</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Fikr 2 -->
+            <article class="review-card">
+              <div class="review-stars" aria-label="5 yulduz">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="review-text">
+                "Farzandimni muntazam Dr. Gulnora Qodirova ko'rigidan o'tkazamiz. Shifokorning bolalarga bo'lgan mehrli munosabati va tushunarli tavsiyalari ota-onalarga katta ishonch beradi."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">S</div>
+                <div>
+                  <h3 class="author-name">Sardorbek Olimov</h3>
+                  <p class="author-meta">Pediatriya bo'limi · Ota-ona</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Fikr 3 -->
+            <article class="review-card">
+              <div class="review-stars" aria-label="5 yulduz">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="review-text">
+                "Bel va bo'yin sohasidagi og'riqlar bilan nevrolog qabuliga yozildim. Nevrologiya va fizioterapiya muolajalaridan so'ng ahvolim sezilarli darajada yaxshilandi. Klinika muhiti juda toza."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">D</div>
+                <div>
+                  <h3 class="author-name">Dilfuza Xolmatova</h3>
+                  <p class="author-meta">Nevrologiya va fizioterapiya · Toshkent</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Fikr 4 -->
+            <article class="review-card">
+              <div class="review-stars" aria-label="5 yulduz">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="review-text">
+                "UZI va laboratoriya tahlillarini ertalab topshirdim, tushlikka qadar barcha natijalar tayyor bo'ldi. Xodimlar xushmuomala, narxlar esa sifatga to'liq mos."
+              </p>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">J</div>
+                <div>
+                  <h3 class="author-name">Jasur Abdullayev</h3>
+                  <p class="author-meta">Diagnostika bo'limi · Toshkent</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="slider-dots" id="reviewsDots" role="tablist" aria-label="Fikrlar sahifalari"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. TIBBIY YANGILIKLAR VA MASLAHATLAR
+         ========================================================= -->
+    <section id="yangiliklar" class="news-section section-padding">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-kicker">Tibbiy blog</p>
+          <h2 class="section-title">Sog'liq uchun foydali maslahatlar</h2>
+          <p class="section-subtitle">
+            Mutaxassis shifokorlarimiz tomonidan tayyorlangan kundalik salomatlik bo'yicha ishonchli tavsiyalar.
+          </p>
+        </div>
+
+        <div class="news-grid">
+          <!-- Maqola 1 -->
+          <article class="news-card reveal">
+            <div class="news-image-wrap">
+              <img
+                src="/src/assets/images/news_healthy_nutrition_1795669867691.jpg"
+                alt="Sog'lom ovqatlanish — muvozanatli taomlar"
+                class="news-image"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Sog'lom ovqatlanish</span></div>
+            </div>
+            <div class="news-body">
+              <p class="news-meta">18 Noyabr, 2026 · Terapiya</p>
+              <h3 class="news-title">Sog'lom ovqatlanish: kunlik ratsionni to'g'ri tuzish qoidalari</h3>
+              <p class="news-desc">
+                Oqsil, foydali yog'lar, tolalar va suv balansini me'yorda ushlash orqali quvvat va moddalar almashinuvini yaxshilash.
+              </p>
+              <button type="button" class="service-btn" data-article-id="ovqatlanish">
+                Batafsil
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Maqola 2 -->
+          <article class="news-card reveal">
+            <div class="news-image-wrap">
+              <img
+                src="/src/assets/images/news_heart_health_1795669866999.jpg"
+                alt="Yurak salomatligi — qon bosimini o'lchash"
+                class="news-image"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Yurak salomatligi</span></div>
+            </div>
+            <div class="news-body">
+              <p class="news-meta">14 Noyabr, 2026 · Kardiologiya</p>
+              <h3 class="news-title">Yurak salomatligi: profilaktik ko'rik qachon zarur?</h3>
+              <p class="news-desc">
+                Arterial bosimni nazorat qilish, xolesterin darajasini tekshirish va yurakni asrashning 5 ta oddiy odati.
+              </p>
+              <button type="button" class="service-btn" data-article-id="yurak">
+                Batafsil
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Maqola 3 -->
+          <article class="news-card reveal">
+            <div class="news-image-wrap">
+              <img
+                src="/src/assets/images/news_immunity_care_1795669867129.jpg"
+                alt="Immunitetni mustahkamlash — tabiiy vitaminlar va choy"
+                class="news-image"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Immunitetni mustahkamlash</span></div>
+            </div>
+            <div class="news-body">
+              <p class="news-meta">09 Noyabr, 2026 · Profilaktika</p>
+              <h3 class="news-title">Immunitetni mustahkamlash: mavsumiy o'zgarishlarga tayyorgarlik</h3>
+              <p class="news-desc">
+                Kuz va qish mavsumida D vitamini, sifatli uyqu hamda jismoniy faollikning organizm himoyasidagi o'rni.
+              </p>
+              <button type="button" class="service-btn" data-article-id="immunitet">
+                Batafsil
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Maqola 4 -->
+          <article class="news-card reveal">
+            <div class="news-image-wrap">
+              <img
+                src="/src/assets/images/news_child_health_1795669868233.jpg"
+                alt="Bolalar salomatligi — pediatr ko'rigi"
+                class="news-image"
+                referrerpolicy="no-referrer"
+              />
+              <div class="media-fallback" aria-hidden="true"><span>Bolalar salomatligi</span></div>
+            </div>
+            <div class="news-body">
+              <p class="news-meta">03 Noyabr, 2026 · Pediatriya</p>
+              <h3 class="news-title">Bolalar salomatligi: maktab yoshidagi bolalarda ko'rik rejasi</h3>
+              <p class="news-desc">
+                Ko'rish qobiliyati, qomatni to'g'ri saqlash va bolalarda sog'lom kun tartibini shakllantirish bo'yicha maslahatlar.
+              </p>
+              <button type="button" class="service-btn" data-article-id="bolalar">
+                Batafsil
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         11. KO'P BERILADIGAN SAVOLLAR (FAQ AKKORDEON)
+         ========================================================= -->
+    <section id="savollar" class="faq-section section-padding section-alt">
+      <div class="container faq-container">
+        <div class="section-header-center reveal">
+          <p class="section-kicker">Ma'lumotnoma</p>
+          <h2 class="section-title">Ko'p beriladigan savollar</h2>
+          <p class="section-subtitle">
+            Klinikaga tashrif buyurish, tahlillar va xizmatlar tartibi bo'yicha eng ko'p so'raladigan savollarga javoblar.
+          </p>
+        </div>
+
+        <div class="faq-list reveal" id="faqAccordion">
+          <div class="faq-item is-open">
+            <button type="button" class="faq-trigger" aria-expanded="true" aria-controls="faq-panel-1" id="faq-btn-1">
+              <span>Qanday qilib shifokor qabuliga yozilish mumkin?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-panel-inner">
+                Saytdagi "Qabulga yozilish" tugmasi yoki onlayn ariza formasi orqali kerakli mutaxassis, sana va vaqtni tanlashingiz mumkin. Shuningdek, Dushanba – Shanba kunlari 08:00 dan 20:00 gacha +998 71 200 00 00 telefon raqamiga qo'ng'iroq qilib ro'yxatdan o'tishingiz mumkin.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+              <span>Klinikada qanday xizmatlar mavjud?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <div class="faq-panel-inner">
+                SHIFO MED markazida terapiya, kardiologiya, pediatriya, nevrologiya, stomatologiya, ginekologiya, dermatologiya, oftalmologiya, ambulator jarrohlik, fizioterapiya, UZI diagnostikasi va to'liq laboratoriya tahlillari xizmatlari ko'rsatiladi.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+              <span>Qabul narxlari qancha?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <div class="faq-panel-inner">
+                Dastlabki mutaxassis maslahati yo'nalishga qarab 120 000 so'mdan 220 000 so'mgacha tashkil etadi (namunaviy demo narxlar). Har bir xizmatning batafsil ma'lumotini "Xizmatlar" bo'limidagi "Batafsil" tugmasi orqali ko'rishingiz mumkin.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+              <span>Tahlillarni qachon topshirish mumkin?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <div class="faq-panel-inner">
+                Laboratoriya Dushanbadan Shanbagacha soat 08:00 dan 16:00 gacha namuna qabul qiladi. Biokimyoviy va gormonal tahlillar uchun ertalab 08:00 – 11:00 oralig'ida och qoringa kelish tavsiya etiladi.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+              <span>Klinika qayerda joylashgan?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <div class="faq-panel-inner">
+                Markazimiz Toshkent shahri, namunaviy manzilda joylashgan (metro bekatiga yaqin va bemorlar uchun qulay avtoturargoh mavjud). Aniq joylashuv sxemasini quyidagi "Aloqa" bo'limida ko'rishingiz mumkin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         12. ALOQA BO'LIMI
+         ========================================================= -->
+    <section id="aloqa" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <p class="section-kicker">Biz bilan bog'lanish</p>
+          <h2 class="section-title">Aloqa va manzil</h2>
+          <p class="section-subtitle">
+            Savollaringiz bormi? Bizga xabar qoldiring yoki klinikamizning ish tartibi bilan tanishing.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Chap ustun: Aloqa ma'lumotlari va xarita -->
+          <div class="contact-details reveal">
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="contact-label">Manzil</h3>
+                  <p class="contact-value">Toshkent shahri, namunaviy manzil</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="contact-label">Telefon</h3>
+                  <p class="contact-value">
+                    <a href="tel:+998712000000" class="contact-link">+998 71 200 00 00</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="contact-label">Elektron pochta</h3>
+                  <p class="contact-value">
+                    <a href="mailto:info@shifomed.uz" class="contact-link">info@shifomed.uz</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="contact-label">Ish vaqti</h3>
+                  <p class="contact-value">Dushanba – Shanba, 08:00 – 20:00</p>
+                  <p class="contact-subvalue">Yakshanba: Dam olish kuni</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interaktiv xarita namunasi -->
+            <div class="map-card" aria-label="Klinika joylashuv xaritasi">
+              <div class="map-visual">
+                <svg class="map-svg" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="520" height="220" fill="#EFF6FF" />
+                  <path d="M0 60H520M0 135H520M110 0V220M260 0V220M410 0V220" stroke="#DBEAFE" stroke-width="8" />
+                  <path d="M45 195C130 155 215 100 325 85C400 75 460 45 520 25" stroke="#BAE6FD" stroke-width="10" stroke-linecap="round" />
+                  <rect x="130" y="75" width="95" height="45" rx="6" fill="#E2E8F0" />
+                  <rect x="285" y="150" width="105" height="45" rx="6" fill="#E2E8F0" />
+                  <circle cx="260" cy="105" r="24" fill="#0D9488" fill-opacity="0.16" />
+                  <circle cx="260" cy="105" r="10" fill="#0D9488" stroke="#FFFFFF" stroke-width="3" />
+                </svg>
+                <div class="map-pin-label">
+                  <strong>SHIFO MED Markazi</strong>
+                  <span>Toshkent shahri, namunaviy manzil</span>
+                </div>
+              </div>
+              <div class="map-footer">
+                <span>Mo'ljal: Markaziy metro bekati yaqinida</span>
+                <button type="button" class="map-copy-btn" id="copyAddressBtn">Manzilni nusxalash</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- O'ng ustun: Aloqa formasi -->
+          <div class="contact-form-card reveal">
+            <h3 class="contact-form-title">Savol yoki taklif yuborish</h3>
+            <p class="contact-form-subtitle">Xabaringizni qoldiring, operatorimiz ish vaqtida siz bilan bog'lanadi.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label">Ism <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  class="form-control"
+                  placeholder="Ismingizni kiriting"
+                  autocomplete="name"
+                  required
+                />
+                <span class="form-error" id="contactNameError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Telefon <span class="req">*</span></label>
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  name="phone"
+                  class="form-control phone-input"
+                  placeholder="+998 90 123 45 67"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="form-error" id="contactPhoneError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Xabar <span class="req">*</span></label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  class="form-control form-textarea"
+                  rows="4"
+                  placeholder="Xabaringiz matnini yozing..."
+                  required
+                ></textarea>
+                <span class="form-error" id="contactMessageError" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="contactSubmitBtn">
+                <span class="btn-label">Xabar yuborish</span>
+              </button>
+
+              <div id="contactSuccessBox" class="form-success-box" role="status" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Xabaringiz qabul qilindi! (Namoyish rejimi)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       13. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="#bosh-sahifa" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#0D9488" />
+              <path d="M16 8V24M8 16H24" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <span>SHIFO MED</span>
+          </a>
+          <p class="footer-desc">
+            Zamonaviy tibbiyot markazi. Har bir bemorga ishonchli diagnostika, tajribali shifokorlar va samimiy g'amxo'rlik.
+          </p>
+          <div class="social-links" aria-label="Ijtimoiy tarmoqlar">
+            <a href="#aloqa" class="social-link" data-social="Telegram" aria-label="Telegram sahifamiz">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+            <a href="#aloqa" class="social-link" data-social="Instagram" aria-label="Instagram sahifamiz">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#aloqa" class="social-link" data-social="Facebook" aria-label="Facebook sahifamiz">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#aloqa" class="social-link" data-social="YouTube" aria-label="YouTube kanalimiz">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Sahifalar</h3>
+          <ul class="footer-links">
+            <li><a href="#bosh-sahifa">Bosh sahifa</a></li>
+            <li><a href="#biz-haqimizda">Biz haqimizda</a></li>
+            <li><a href="#xizmatlar">Xizmatlar</a></li>
+            <li><a href="#shifokorlar">Shifokorlar</a></li>
+            <li><a href="#yangiliklar">Yangiliklar</a></li>
+            <li><a href="#aloqa">Aloqa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Tibbiy xizmatlar</h3>
+          <ul class="footer-links">
+            <li><a href="#xizmatlar">Terapiya va Kardiologiya</a></li>
+            <li><a href="#xizmatlar">Pediatriya va Nevrologiya</a></li>
+            <li><a href="#xizmatlar">Stomatologiya va Ginekologiya</a></li>
+            <li><a href="#xizmatlar">UZI diagnostika</a></li>
+            <li><a href="#xizmatlar">Laboratoriya tahlillari</a></li>
+            <li><a href="#xizmatlar">Jarrohlik va Fizioterapiya</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Aloqa ma'lumotlari</h3>
+          <ul class="footer-contact-list">
+            <li>Toshkent shahri, namunaviy manzil</li>
+            <li><a href="tel:+998712000000">+998 71 200 00 00</a></li>
+            <li><a href="mailto:info@shifomed.uz">info@shifomed.uz</a></li>
+            <li>Du – Sha: 08:00 – 20:00</li>
+            <li>Yakshanba: Dam olish kuni</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          © <span id="currentYear">2026</span> SHIFO MED — Zamonaviy tibbiyot markazi. Barcha huquqlar himoyalangan.
+        </p>
+        <p class="footer-demo-badge">Namoyish (demo) veb-loyihasi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       YUQORIGA QAYTISH TUGMASI
+       ========================================================= -->
+  <button type="button" id="backToTopBtn" class="back-to-top" aria-label="Sahifa yuqorisiga qaytish" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- =========================================================
+       TOAST BILDIRISHNOMA KONTEYNERI
+       ========================================================= -->
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- =========================================================
+       MODALLAR:
+       1. Qabulga yozilish modali
+       2. Muvaffaqiyatli yozilish tasdiq modali
+       3. Xizmat / Maqola batafsil modali
+       ========================================================= -->
+
+  <!-- 1. Qabulga yozilish modali -->
+  <div id="bookingModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle" hidden>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <p class="modal-kicker">Tezkor yozilish</p>
+          <h2 id="bookingModalTitle" class="modal-title">Shifokor qabuliga yozilish</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="bookingModal" aria-label="Oynani yopish">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <form id="modalBookingForm" class="booking-form" novalidate>
+        <div class="form-group">
+          <label for="modalBookingName" class="form-label">Bemorning ism-familiyasi <span class="req">*</span></label>
+          <input type="text" id="modalBookingName" name="fullName" class="form-control" placeholder="Masalan: Azizbek Rahimov" required />
+          <span class="form-error" id="modalBookingNameError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="modalBookingPhone" class="form-label">Telefon raqami <span class="req">*</span></label>
+          <input type="tel" id="modalBookingPhone" name="phone" class="form-control phone-input" placeholder="+998 90 123 45 67" inputmode="tel" required />
+          <span class="form-error" id="modalBookingPhoneError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="modalBookingSpecialist" class="form-label">Mutaxassis tanlash <span class="req">*</span></label>
+          <select id="modalBookingSpecialist" name="specialist" class="form-control" required>
+            <option value="">Mutaxassis yoki yo'nalishni tanlang</option>
+            <option value="Dr. Rustam Karimov — Kardiologiya">Dr. Rustam Karimov — Kardiologiya</option>
+            <option value="Dr. Gulnora Qodirova — Pediatriya">Dr. Gulnora Qodirova — Pediatriya</option>
+            <option value="Dr. Temur Almazov — Nevrologiya">Dr. Temur Almazov — Nevrologiya</option>
+            <option value="Dr. Dilnoza Axmedova — UZI diagnostika">Dr. Dilnoza Axmedova — UZI diagnostika</option>
+            <option value="Terapiya bo'limi">Terapiya bo'limi</option>
+            <option value="Stomatologiya bo'limi">Stomatologiya bo'limi</option>
+            <option value="Ginekologiya bo'limi">Ginekologiya bo'limi</option>
+            <option value="Dermatologiya bo'limi">Dermatologiya bo'limi</option>
+            <option value="Laboratoriya tahlillari">Laboratoriya tahlillari</option>
+            <option value="Oftalmologiya bo'limi">Oftalmologiya bo'limi</option>
+            <option value="Jarrohlik bo'limi">Jarrohlik bo'limi</option>
+            <option value="Fizioterapiya bo'limi">Fizioterapiya bo'limi</option>
+          </select>
+          <span class="form-error" id="modalBookingSpecialistError" role="alert"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalBookingDate" class="form-label">Qabul sanasi <span class="req">*</span></label>
+            <input type="date" id="modalBookingDate" name="date" class="form-control" required />
+            <span class="form-error" id="modalBookingDateError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="modalBookingTime" class="form-label">Qabul vaqti <span class="req">*</span></label>
+            <select id="modalBookingTime" name="time" class="form-control" required>
+              <option value="">Vaqtni tanlang</option>
+              <option value="08:30">08:30</option>
+              <option value="09:30">09:30</option>
+              <option value="10:30">10:30</option>
+              <option value="11:30">11:30</option>
+              <option value="13:00">13:00</option>
+              <option value="14:30">14:30</option>
+              <option value="16:00">16:00</option>
+              <option value="17:30">17:30</option>
+              <option value="19:00">19:00</option>
+            </select>
+            <span class="form-error" id="modalBookingTimeError" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="modalBookingNote" class="form-label">Izoh (ixtiyoriy)</label>
+          <textarea id="modalBookingNote" name="note" class="form-control form-textarea" rows="2" placeholder="Qo'shimcha ma'lumot..."></textarea>
+        </div>
+
+        <p class="modal-demo-note">Namoyish (demo) rejimi: ma'lumotlar shifoxona serveriga yuborilmaydi.</p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="modalBookingSubmit">
+          <span class="btn-label">Arizani tasdiqlash</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Muvaffaqiyatli yozilish tasdiq modali -->
+  <div id="successModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="successModalTitle" hidden>
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="success-modal-body">
+        <div class="success-icon-circle" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 id="successModalTitle" class="modal-title">Qabulga ariza qabul qilindi</h2>
+        <p class="success-modal-desc">
+          Hurmatli bemor, quyidagi ma'lumotlar asosida qabul arizangiz shakllantirildi (namoyish rejimi):
+        </p>
+
+        <dl class="summary-list" id="bookingSummaryList"></dl>
+
+        <p class="modal-demo-note">
+          Eslatma: Bu front-end namoyish (demo) ilovasi bo'lib, ariza haqiqiy shifoxona tizimiga yuborilmagan.
+        </p>
+
+        <button type="button" class="btn btn-primary btn-block" data-close-modal="successModal">
+          Tushunarli, yopish
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Xizmat va Maqola batafsil modali -->
+  <div id="infoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" hidden>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <p class="modal-kicker" id="infoModalKicker">Ma'lumot</p>
+          <h2 id="infoModalTitle" class="modal-title">Sarlavha</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="infoModal" aria-label="Oynani yopish">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="infoModalBody" class="info-modal-body"></div>
+      <div class="info-modal-footer" id="infoModalFooter"></div>
+    </div>
+  </div>
+
+  <!-- Asosiy JavaScript fayli -->
+  <script src="script.js" defer></script>
+</body>
+</html>

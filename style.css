@@ -1,0 +1,2148 @@
+/* ==========================================================================
+   SHIFO MED — Zamonaviy tibbiyot markazi
+   Sof CSS3 uslublar jadvali (Frameworklarsiz)
+   ========================================================================== */
+
+:root {
+  /* Asosiy ranglar palitrasi */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f8fb;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eef6fc;
+
+  /* Navy, Moviy va Feruza (Turquoise) aksentlari */
+  --color-navy: #0f243d;
+  --color-navy-mid: #1e3a5f;
+  --color-blue-soft: #e0f2fe;
+  --color-blue: #0284c7;
+  --color-turquoise: #0d9488;
+  --color-turquoise-hover: #0f766e;
+  --color-turquoise-soft: #ccfbf1;
+
+  /* Matn ranglari (WCAG AA kontrast) */
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-on-dark: #f8fafc;
+
+  /* Chegaralar va holat ranglari */
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-error: #dc2626;
+  --color-error-bg: #fef2f2;
+  --color-success: #059669;
+  --color-success-bg: #ecfdf5;
+  --color-star: #f59e0b;
+
+  /* Shriftlar */
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* O'lchamlar va radiuslar */
+  --container-max: 1200px;
+  --header-height: 76px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  /* Soyalar (bitta darajadagi yumshoq chuqurlik) */
+  --shadow-sm: 0 1px 3px rgba(15, 36, 61, 0.06);
+  --shadow-card: 0 8px 24px -6px rgba(15, 36, 61, 0.07), 0 2px 6px -2px rgba(15, 36, 61, 0.04);
+  --shadow-float: 0 18px 38px -12px rgba(15, 36, 61, 0.14);
+
+  /* Animatsiya tezligi */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 180ms var(--ease-out);
+  --transition-base: 260ms var(--ease-out);
+}
+
+/* ==========================================================================
+   Asosiy Reset va Bazaviy Uslublar
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-turquoise);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 18px;
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Konteyner va Bo'lim oralig'i */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section-padding {
+  padding-block: 88px;
+}
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section-kicker {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-turquoise);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.375rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+  text-wrap: balance;
+}
+
+.section-subtitle {
+  margin-top: 12px;
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  max-width: 62ch;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+}
+
+.section-header-center .section-subtitle {
+  margin-inline: auto;
+}
+
+.section-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Yuklanish Animatsiyasi (Page Loader)
+   ========================================================================== */
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: opacity 320ms var(--ease-out), visibility 320ms var(--ease-out);
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loader-cross {
+  animation: loaderPulse 1s ease-in-out infinite;
+}
+
+.loader-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+@keyframes loaderPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.92);
+    opacity: 0.78;
+  }
+}
+
+/* ==========================================================================
+   Tugmalar (Buttons)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-lg {
+  min-height: 48px;
+  padding: 12px 26px;
+  font-size: 1rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--color-turquoise);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-turquoise-hover);
+  box-shadow: 0 8px 20px -6px rgba(13, 148, 136, 0.45);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-navy);
+  border-color: var(--color-border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-blue-soft);
+  border-color: var(--color-blue);
+  color: var(--color-navy);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-border-strong);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-navy);
+  border-color: var(--color-navy);
+  color: #ffffff;
+}
+
+.btn.is-loading {
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   1. HEADER / NAVIGATSIYA
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 6px 24px -8px rgba(15, 36, 61, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: var(--header-height);
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-block: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-turquoise);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-navy);
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-navy);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-drawer {
+  border-top: 1px solid var(--color-border);
+  background-color: #ffffff;
+  padding: 16px 24px 24px;
+  box-shadow: var(--shadow-float);
+}
+
+.mobile-drawer[hidden] {
+  display: none;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--color-navy);
+  transition: background-color var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--color-bg-alt);
+}
+
+.mobile-drawer-cta {
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. HERO BO'LIMI
+   ========================================================================== */
+
+.hero-section {
+  padding-block: 56px 76px;
+  background: linear-gradient(180deg, #f4f9fd 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
+  gap: 48px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 16px;
+}
+
+.hero-kicker {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-turquoise);
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--color-navy);
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  max-width: 52ch;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.hero-demo-note {
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.hero-media {
+  position: relative;
+  display: flex;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-blue-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tasvir yuklanmasa ko'rinadigan zaxira qatlam */
+.media-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-navy-mid);
+  background: linear-gradient(135deg, #e0f2fe 0%, #ccfbf1 100%);
+}
+
+.hero-image,
+.about-image,
+.doctor-photo,
+.news-image {
+  position: relative;
+  z-index: 1;
+}
+
+/* Suzuvchi ma'lumot kartasi */
+.hero-floating-card {
+  position: absolute;
+  left: -20px;
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-float);
+  max-width: 270px;
+}
+
+.floating-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-blue-soft);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.floating-text {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+/* ==========================================================================
+   3. STATISTIKA BO'LIMI
+   ========================================================================== */
+
+.stats-section {
+  background-color: var(--color-navy);
+  color: var(--color-text-on-dark);
+  padding-block: 44px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-item {
+  padding: 12px 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #5eead4;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   4. BIZ HAQIMIZDA BO'LIMI
+   ========================================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: stretch;
+  gap: 56px;
+}
+
+.about-media {
+  display: flex;
+}
+
+.about-image-frame {
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-description {
+  margin-top: 18px;
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 28px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border);
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pillar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-soft);
+  color: var(--color-turquoise);
+  flex-shrink: 0;
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.pillar-text {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   5. TIBBIY XIZMATLAR BO'LIMI
+   ========================================================================== */
+
+.service-filters {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 5px;
+  background-color: #e2e8f0;
+  border-radius: var(--radius-md);
+}
+
+.filter-tab {
+  min-height: 38px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.filter-tab:hover {
+  color: var(--color-navy);
+}
+
+.filter-tab.active {
+  background-color: #ffffff;
+  color: var(--color-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: #bae6fd;
+  box-shadow: var(--shadow-card);
+}
+
+.service-card.is-hidden {
+  display: none;
+}
+
+.service-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-blue-soft);
+  color: var(--color-blue);
+  margin-bottom: 18px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.service-card:hover .service-icon-wrap {
+  background-color: var(--color-turquoise);
+  color: #ffffff;
+}
+
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  min-height: 40px;
+  padding: 6px 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-turquoise);
+  cursor: pointer;
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.service-btn:hover {
+  color: var(--color-navy);
+  gap: 10px;
+}
+
+/* ==========================================================================
+   6. SHIFOKORLARIMIZ BO'LIMI
+   ========================================================================== */
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.doctor-photo-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-surface-soft);
+  overflow: hidden;
+}
+
+.doctor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 360ms var(--ease-out);
+}
+
+.doctor-card:hover .doctor-photo {
+  transform: scale(1.03);
+}
+
+.doctor-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 22px 22px;
+}
+
+.doctor-meta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-turquoise);
+  margin-bottom: 6px;
+}
+
+.doctor-name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.doctor-degree {
+  margin-top: 6px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.star-icon {
+  color: var(--color-star);
+}
+
+.rating-score {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.rating-count {
+  color: var(--color-text-muted);
+}
+
+.doctor-cta {
+  width: 100%;
+}
+
+/* ==========================================================================
+   7. QABULGA YOZILISH FORMASI
+   ========================================================================== */
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 48px;
+}
+
+.booking-lead {
+  margin-top: 16px;
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+}
+
+.booking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.booking-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-blue-soft);
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.step-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.demo-disclaimer {
+  margin-top: 28px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.booking-card,
+.contact-form-card {
+  padding: 32px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.booking-form,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.req {
+  color: var(--color-error);
+}
+
+.form-control {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-turquoise);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.14);
+}
+
+.form-control.is-invalid {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.form-textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form-error {
+  min-height: 18px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-error);
+}
+
+.form-error:empty {
+  display: none;
+}
+
+.form-success-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.form-success-box[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   8. NEGA AYNAN SHIFO MED?
+   ========================================================================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  padding: 28px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.why-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-turquoise-soft);
+  color: var(--color-turquoise-hover);
+  margin-bottom: 18px;
+}
+
+.why-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.why-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   9. BEMORLAR FIKRLARI (KARUSEL)
+   ========================================================================== */
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.slider-btn:hover {
+  background-color: var(--color-navy);
+  border-color: var(--color-navy);
+  color: #ffffff;
+}
+
+.reviews-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 420ms var(--ease-out);
+  will-change: transform;
+}
+
+.review-card {
+  flex: 0 0 calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+  color: var(--color-star);
+  font-size: 1.125rem;
+  margin-bottom: 14px;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.review-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--color-blue-soft);
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.author-meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-border-strong);
+  cursor: pointer;
+  transition: width var(--transition-fast), background-color var(--transition-fast);
+}
+
+.slider-dot.active {
+  width: 26px;
+  background-color: var(--color-turquoise);
+}
+
+/* ==========================================================================
+   10. TIBBIY YANGILIKLAR
+   ========================================================================== */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.news-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-blue-soft);
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 360ms var(--ease-out);
+}
+
+.news-card:hover .news-image {
+  transform: scale(1.04);
+}
+
+.news-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 22px 22px;
+}
+
+.news-meta {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.news-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.38;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+}
+
+.news-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   11. FAQ AKKORDEON
+   ========================================================================== */
+
+.faq-container {
+  max-width: 840px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item.is-open {
+  border-color: #99f6e4;
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 22px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--color-turquoise);
+  transition: transform var(--transition-fast);
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-panel[hidden] {
+  display: none;
+}
+
+.faq-panel-inner {
+  padding: 0 22px 20px;
+  font-size: 0.96875rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   12. ALOQA BO'LIMI
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  color: var(--color-turquoise);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.contact-subvalue {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.contact-link:hover {
+  color: var(--color-turquoise);
+  text-decoration: underline;
+}
+
+.map-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.map-visual {
+  position: relative;
+}
+
+.map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-pin-label {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 14px;
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.map-pin-label strong {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: var(--color-navy);
+}
+
+.map-pin-label span {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.map-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.map-copy-btn {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast);
+}
+
+.map-copy-btn:hover {
+  background-color: var(--color-blue-soft);
+}
+
+.contact-form-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.contact-form-subtitle {
+  margin-top: 6px;
+  margin-bottom: 22px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   13. FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--color-navy);
+  color: #cbd5e1;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footer-desc {
+  margin-top: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 34ch;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #e2e8f0;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+  color: #ffffff;
+}
+
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-links,
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9375rem;
+}
+
+.footer-links a:hover,
+.footer-contact-list a:hover {
+  color: #5eead4;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   YUQORIGA QAYTISH VA TOAST
+   ========================================================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--color-navy);
+  box-shadow: var(--shadow-float);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.back-to-top[hidden] {
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.toast-container {
+  position: fixed;
+  right: 24px;
+  bottom: 84px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-navy);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-float);
+  animation: toastIn 240ms var(--ease-out);
+}
+
+.toast--success {
+  background-color: #065f46;
+}
+
+.toast--error {
+  background-color: #991b1b;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   MODALLAR
+   ========================================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(15, 36, 61, 0.56);
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 560px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 28px;
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-float);
+  animation: modalIn 220ms var(--ease-out);
+}
+
+.modal-dialog-sm {
+  max-width: 480px;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-kicker {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-turquoise);
+  margin-bottom: 4px;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.modal-close:hover {
+  background-color: var(--color-bg-alt);
+  color: var(--color-navy);
+}
+
+.modal-demo-note {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.success-modal-body {
+  text-align: center;
+}
+
+.success-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  margin-bottom: 16px;
+}
+
+.success-modal-desc {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.summary-list {
+  margin: 20px 0;
+  padding: 16px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.summary-row dt {
+  color: var(--color-text-muted);
+}
+
+.summary-row dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.success-modal-body .modal-demo-note {
+  margin-bottom: 20px;
+}
+
+.info-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--color-text-secondary);
+  font-size: 0.96875rem;
+  line-height: 1.7;
+}
+
+.info-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--color-text);
+}
+
+.info-modal-meta {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.info-modal-footer {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATSIYALARI
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .loader-cross {
+    animation: none;
+  }
+  .reviews-track {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   MOSLASHUVCHAN DIZAYN (RESPONSIVE BREAKPOINTS)
+   ========================================================================== */
+
+@media (max-width: 1120px) {
+  .services-grid,
+  .doctors-grid,
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid,
+  .about-grid,
+  .booking-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-floating-card {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 920px) {
+  .main-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .stat-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section-padding {
+    padding-block: 60px;
+  }
+
+  .hero-section {
+    padding-block: 36px 52px;
+  }
+
+  .hero-image-frame,
+  .about-image-frame {
+    min-height: 300px;
+  }
+
+  .hero-floating-card {
+    position: static;
+    margin-top: 14px;
+    max-width: 100%;
+  }
+
+  .hero-media {
+    flex-direction: column;
+  }
+
+  .about-pillars,
+  .services-grid,
+  .doctors-grid,
+  .why-grid,
+  .news-grid,
+  .form-row,
+  .contact-info-list,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    flex: 0 0 100%;
+  }
+
+  .booking-card,
+  .contact-form-card {
+    padding: 22px 18px;
+  }
+
+  .map-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 76px;
+    max-width: none;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
